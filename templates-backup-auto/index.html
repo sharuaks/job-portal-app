@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Connect</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" href="/css/font-awesome.min.css" />
+  <link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" />
+</head>
+
+<body class="background">
+  <nav class="main_div">
+    <div class="logo_left">
+      <label class="logo">Career</label>
+      <label class="logo_com">Connect</label>
+    </div>
+    <div class="logo_right">
+      <label class="Candidate_login_btn">
+        <a th:href="@{/login}" href="/login">Job Candidate Login</a> /
+        <a th:href="@{/register}" href="/register">Register</a>
+      </label>
+      <label class="Recruiter_login_btn">
+        <a th:href="@{/login}" href="/login">Recruiter Login</a> /
+        <a th:href="@{/register}" href="/register">Register</a>
+      </label>
+    </div>
+  </nav>
+
+  <form th:action="@{/global-search/}" action="/global-search/">
+    <div class="searchBox">
+      <div class="inner">
+        <input type="text" placeholder="Search for a job" name="job" th:value="${job}" />
+        <input type="text" placeholder="Enter a location" name="location" th:value="${location}" />
+        <button type="submit" style="border: none; background: transparent; padding: 10px; cursor: pointer;">
+          <i class="fas fa-search" style="color: white;"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <footer>
+    <label class="copy-right">Copyright © careerconnect.com</label>
+  </footer>
+
+  <!-- ===== SCRIPTS: jQuery first, plugins, then main.js (must be last) ===== -->
+
+  <!-- 1) jQuery (single local copy) -->
+  <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+
+  <!-- 2) Bootstrap bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 3) Plugins (after jQuery, before main.js) -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.min.js"></script>
+
+  <!-- 4) Your app JS (LAST) -->
+  <script src="/js/main.js"></script>
+
+  <!-- =================================================================== -->
+</body>
+</html>

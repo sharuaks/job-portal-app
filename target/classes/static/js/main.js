@@ -180,10 +180,15 @@ if(candidate.length){
   new WOW().init();
 
   // counter 
+  if (typeof $.fn.counterUp === 'function') {
   $('.counter').counterUp({
     delay: 10,
-    time: 10000
+    time: 1000
   });
+} else {
+  console.warn('counterUp plugin is not loaded.');
+}
+
 
 /* magnificPopup img view */
 $('.popup-image').magnificPopup({

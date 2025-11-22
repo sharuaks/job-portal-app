@@ -1,67 +1,154 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Career Connect</title>
-    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/font-awesome.min.css}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}"/>
-    <meta charset="ISO-8859-1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Connect</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" href="/css/font-awesome.min.css" />
+  <link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" />
 </head>
+
 <body class="background">
-<nav class="main_div">
+  <nav class="main_div">
     <div class="logo_left">
-        <label class="logo">
-            Career
-        </label>
-        <label class="logo_com">
-            Connect
-        </label>
+      <label class="logo">Career</label>
+      <label class="logo_com">Connect</label>
     </div>
     <div class="logo_right">
-        <label class="Candidate_login_btn">
-            <a th:href="@{/login}">
-                Job Candidate Login
-            </a>
-            /
-            <a th:href="@{/register}">
-                 Register
-            </a>
-        </label>
-        <label class="Recruiter_login_btn">
-            <a th:href="@{/login}">
-                Recruiter Login
-            </a>
-            /
-            <a th:href="@{/register}">
-                 Register
-            </a>
-
-        </label>
+      <label class="Candidate_login_btn">
+        <a th:href="@{/login}" href="/login">Job Candidate Login</a> /
+        <a th:href="@{/register}" href="/register">Register</a>
+      </label>
+      <label class="Recruiter_login_btn">
+        <a th:href="@{/login}" href="/login">Recruiter Login</a> /
+        <a th:href="@{/register}" href="/register">Register</a>
+      </label>
     </div>
-</nav>
-<form th:action="@{/global-search/}">
+  </nav>
+
+  <form th:action="@{/global-search/}" action="/global-search/">
     <div class="searchBox">
-        <div class="inner">
-
-            <input type="text" placeholder="Search for a job" name="job" th:value="${job}" style="padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px; flex: 1;"/>
-            <input type="text" placeholder="Enter a location" name="location" th:value="${location}" style="padding: 10px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px; flex: 1;"/>
-            <button type="submit" style="border: none; background: transparent; padding: 10px; cursor: pointer;">
-                <i class="fas fa-search" style="margin: 0; color: white;"></i>
-            </button>
-
-        </div>
+      <div class="inner">
+        <input type="text" placeholder="Search for a job" name="job" th:value="${job}" />
+        <input type="text" placeholder="Enter a location" name="location" th:value="${location}" />
+        <button type="submit" style="border: none; background: transparent; padding: 10px; cursor: pointer;">
+          <i class="fas fa-search" style="color: white;"></i>
+        </button>
+      </div>
     </div>
-</form>
+  </form>
+
+  <footer>
+    <label class="copy-right">Copyright Â© careerconnect.com</label>
+  </footer>
+
+  <!-- ===== SCRIPTS: jQuery first, plugins, then main.js (must be last) ===== -->
+
+  <!-- 1) jQuery (single local copy) -->
+  
+
+  <!-- 2) Bootstrap bundle (includes Popper) -->
+  
+
+  <!-- 3) Plugins (after jQuery, before main.js) -->
+  
+  
+  
+
+  <!-- 4) Your app JS (LAST) -->
+  
 
 
-<footer>
-    <label class="copy-right">Copyright © careerconnect.com</label>
-</footer>
+
+
+  <!-- =================================================================== -->
+<!-- ===== SCRIPTS (load in this order) ===== -->
+<script src="/js/vendor/jquery-1.12.4.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.min.js"></script>
+<!-- jQuery first -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- waypoints (required by counterUp v1) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<!-- counterUp plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+<!-- your app script that uses counterUp -->
+<!-- jQuery first -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- waypoints (required by counterUp v1) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<!-- counterUp plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+<!-- your app script that uses counterUp -->
+<!-- jQuery (only one jQuery should be loaded) -->
+<script src="/js/jquery-1.12.4.min.js"></script>
+
+<!-- imagesLoaded (optional, recommended when using Isotope) -->
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+
+<!-- Isotope -->
+<script src="/js/isotope.pkgd.min.js"></script>
+
+<!-- Waypoints & CounterUp (if used) -->
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+
+<!-- ajaxChimp (Mailchimp jQuery plugin) -->
+<script src="/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Your main app script last -->
+<script src="/js/main.js"></script>
+
+<!-- jQuery first -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- waypoints (required by counterUp v1) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<!-- counterUp plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+<!-- your app script that uses counterUp -->
+<!-- jQuery (only one jQuery should be loaded) -->
+<script src="/js/jquery-1.12.4.min.js"></script>
+
+<!-- imagesLoaded (optional, recommended when using Isotope) -->
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+
+<!-- Isotope -->
+<script src="/js/isotope.pkgd.min.js"></script>
+
+<!-- Waypoints & CounterUp (if used) -->
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+
+<!-- ajaxChimp (Mailchimp jQuery plugin) -->
+<script src="/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Your main app script last -->
+<script src="/js/main.js"></script>
+<!-- ===== END SCRIPTS ===== -->
 </body>
-
-<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
-<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-
 </html>
+
+
+
